@@ -45,7 +45,7 @@ def homepage():
     # Clima
     owm = OWM('dcd035bef80eaba0aa59b0aa27616c49')
     mgr = owm.weather_manager()
-    observation = mgr.weather_at_place(f'{location['cidade']}, BR')
+    observation = mgr.weather_at_place(f'{location["cidade"]}, BR')
     air_mgr = owm.airpollution_manager()
     air_obs = air_mgr.air_quality_at_coords
     w = observation.weather
@@ -68,7 +68,7 @@ def homepage():
     pol_mgr = owm.airpollution_manager()
     air_status = pol_mgr.air_quality_at_coords(latitude, longitude) 
 
-    return render_template('index.html', ip=ip, date=date, location=location, clima = clima, poluentes=air_status, email=email)
+    return render_template('index.html', ip=ip, date=date, location=location, clima = clima, poluentes=air_status)
 
 if __name__ == '__main__':
     app.run(debug=True)
