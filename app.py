@@ -10,40 +10,7 @@ from unidecode import unidecode
 
 app = Flask(__name__)
 
-def siglaEstado(estado):
-    lista_estados = {
-        'Acre': 'AC',
-        'Alagoas': 'AL',
-        'Amapá': 'AP',
-        'Amazonas': 'AM',
-        'Bahia': 'BA',
-        'Ceará': 'CE',
-        'Distrito Federal': 'DF',
-        'Espírito Santo': 'ES',
-        'Goiás': 'GO',
-        'Maranhão': 'MA',
-        'Mato Grosso': 'MT',
-        'Mato Grosso do Sul': 'MS',
-        'Minas Gerais': 'MG',
-        'Pará': 'PA',
-        'Paraíba': 'PB',
-        'Paraná': 'PR',
-        'Pernambuco': 'PE',
-        'Piauí': 'PI',
-        'Rio de Janeiro': 'RJ',
-        'Rio Grande do Norte': 'RN',
-        'Rio Grande do Sul': 'RS',
-        'Rondônia': 'RO',
-        'Roraima': 'RR',
-        'Santa Catarina': 'SC',
-        'São Paulo': 'SP',
-        'Sergipe': 'SE',
-        'Tocantins': 'TO'
-    }
-
-    sigla = lista_estados.get(estado)
-    return sigla
-
+# Função responsável por retornar a latitude e a longitude de uma determinada cidade
 def get_lat_lon(city_name):
     url = f"https://nominatim.openstreetmap.org/search?city={city_name}&format=json"
     response = requests.get(url)
@@ -56,7 +23,9 @@ def get_lat_lon(city_name):
         else:
             return None
     else:
-        return None            
+        return None   
+
+# Rota padrão da homepage         
 
 @app.route('/')
 def homepage():
@@ -81,6 +50,7 @@ def homepage():
     air_obs = air_mgr.air_quality_at_coords
     w = observation.weather
 
+    # Dicionário com todas as informações do clima
     clima = {'status': w.status,
              'detailed_status': w.detailed_status,
              'vento': w.wind(),
@@ -97,8 +67,6 @@ def homepage():
     latitude, longitude = get_lat_lon(location['cidade'])
     pol_mgr = owm.airpollution_manager()
     air_status = pol_mgr.air_quality_at_coords(latitude, longitude) 
-
-    email = dict(session).get('email', None)
 
     return render_template('index.html', ip=ip, date=date, location=location, clima = clima, poluentes=air_status, email=email)
 

@@ -3,6 +3,7 @@ var texto = p.textContent.trim();
 var agora = new Date();
 var hora = agora.getHours();
 
+// Altera a imagem da homepage baseado no clima atual
 if (texto == "Chuva Intensa" || texto == "Chuva Muito Intensa") {
   $("#weather_img").attr("src", "static/images/chuva.png");
 } else if (texto == "Tempestade") {
@@ -11,6 +12,8 @@ if (texto == "Chuva Intensa" || texto == "Chuva Muito Intensa") {
   $("#weather_img").attr("src", "static/images/neve.png");
 }
 
+// Verificação do horário do dia para exibir a imagem correta, sol ou lua.
+// Se o horário estiver entre 06:00 e 18:00, ele mostra o sol.
 if (hora >= 6 && hora < 18) {
   if (texto == "Céu Limpo") {
     $("#weather_img").attr("src", "static/images/sol.png");
@@ -19,6 +22,7 @@ if (hora >= 6 && hora < 18) {
   } else if (texto == "Nublado") {
     $("#weather_img").attr("src", "static/images/dia_nublado.png");
   }
+  // Se estiver entre 18:01 e 5:59 ele mostra lua.
 } else {
   if (texto == "Céu Limpo") {
     $("#weather_img").attr("src", "static/images/lua.png");

@@ -1,3 +1,6 @@
+/* Adiciona o Listener para identificar clicks no menu de navegação, e exibir
+o carrossel correto. */
+
 document.getElementById("home-btn").addEventListener("click", function () {
   $("#page-carousel").carousel(0);
 });
