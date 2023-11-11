@@ -20,6 +20,10 @@ footer {
   bottom: 20px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .navigation {
   position: relative;
   width: 100%;
@@ -176,6 +180,10 @@ body {
   margin-left: 20px;
 }
 
+.user-display {
+  text-align: left;
+}
+
 .overlay {
   display: none;
   position: fixed;
@@ -191,6 +199,53 @@ body {
   max-width: 1050px;
   width: 100%;
   margin: auto;
+}
+
+.profile-container {
+  border: 2px solid white;
+  padding: 5px 25px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.user-name {
+  margin-bottom: 0;
+}
+
+.user-email {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+img.user-profile-pic {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.logout-button {
+  text-align: center;
+  background: white;
+  width: 200px;
+  padding: 5px 0;
+  border-radius: 50px;
+}
+
+.login-btn {
+  padding: 10px;
+}
+
+.login-container {
+  text-align: center;
+}
+
+a#login-google-button {
+  background: white;
+  border: 2px solid #eee;
+  border-radius: 50px;
+  width: 75vw;
 }
 
 .carousel-item {
