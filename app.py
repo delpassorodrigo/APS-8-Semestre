@@ -33,7 +33,7 @@ oauth.register(
     server_metadata_url=f'{appConf.get("OAUTH2_META_URL")}',
 )
 
-# Função responsável por retornar a latitude e a longitude de uma determinada cidade
+# Função responsável por retornar a latitude e a longitude de uma determinada cidade {city_name}
 def get_lat_lon(city_name):
     url = f"https://nominatim.openstreetmap.org/search?city={city_name}&format=json"
     response = requests.get(url)
@@ -60,7 +60,7 @@ def homepage():
     date = dt.datetime.now().strftime('%d / %m / %Y')
 
     # Localização
-    response = requests.get(f'https://ipinfo.io/{ip}/json')
+    response = requests.get(f'https://ipinfo.io/{ip}?token=88e51132190d74')
     result = response.json()
     location = {'cidade': result['city'],
                 'estado': result['region']}

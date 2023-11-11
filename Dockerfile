@@ -8,6 +8,7 @@ WORKDIR /app
 COPY ./requirements.txt /app
 
 # Instalando as dependências sem cache (instalação limpa)
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Copiando os arquivos do app
