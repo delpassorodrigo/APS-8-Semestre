@@ -36,4 +36,6 @@ Subindo os containers:
 ## Demonstração
 
 
-![Demonstração](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHpoMWZza3kxaDN6b2ZlcWNyMjA3ZGJkMDIwZzd3dGZ5cmU5M2hkcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/X3eUO9ibbJmoU9oHyw/giphy.gif)
+![Demonstração](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTJ6YTFyeWk1eTgwMW9kaTI1eDEybXJiMWp0ajlkcWlpankyZDR5YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7Hut5yIHJYzmxz0XIS/giphy.gif)
+
+![Autenticação](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTc3bWN4bzVkNmhqcGYyNTZranp1cXQ1cnZicXFoa2k5MTB3ZWV6ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0CZWu7hAAjSSYgrCCu/giphy.gif)
