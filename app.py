@@ -68,7 +68,7 @@ def homepage():
     # Clima
     owm = OWM('dcd035bef80eaba0aa59b0aa27616c49')
     mgr = owm.weather_manager()
-    observation = mgr.weather_at_place(f'{location['cidade']}, BR')
+    observation = mgr.weather_at_place(f'{location["cidade"]}, BR')
     air_mgr = owm.airpollution_manager()
     air_obs = air_mgr.air_quality_at_coords
     w = observation.weather
