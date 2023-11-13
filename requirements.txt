@@ -1,3 +1,4 @@
+Authlib==1.2.1
 Flask==3.0.0
 maxminddb_geolite2==2018.703
 pyowm==3.3.0

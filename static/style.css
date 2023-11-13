@@ -7,6 +7,13 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  --bg-color: #09393f;
+  &.dark-mode {
+    --bg-color: #ffffff;
+  }
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -18,6 +25,10 @@ body {
 footer {
   padding: 20px;
   bottom: 20px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .navigation {
@@ -164,6 +175,71 @@ body {
   );
 }
 
+.switch-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 100px;
+  height: 50px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #2196f3;
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 70px;
+}
+
+.darkmode {
+  background: radial-gradient(
+    circle at 24.1% 68.8%,
+    rgb(50, 50, 50) 0%,
+    rgb(0, 0, 0) 99.4%
+  );
+}
+
+.dark-btn {
+  background: #222327 !important;
+}
+
+.dark-txt {
+  color: #222327 !important;
+}
+
 .menu-icon {
   font-size: 24px;
   cursor: pointer;
@@ -174,6 +250,10 @@ body {
   height: 40px;
   border-radius: 50%;
   margin-left: 20px;
+}
+
+.user-display {
+  text-align: left;
 }
 
 .overlay {
@@ -191,6 +271,53 @@ body {
   max-width: 1050px;
   width: 100%;
   margin: auto;
+}
+
+.profile-container {
+  border: 2px solid white;
+  padding: 5px 25px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.user-name {
+  margin-bottom: 0;
+}
+
+.user-email {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+img.user-profile-pic {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.logout-button {
+  text-align: center;
+  background: white;
+  width: 200px;
+  padding: 5px 0;
+  border-radius: 50px;
+}
+
+.login-btn {
+  padding: 10px;
+}
+
+.login-container {
+  text-align: center;
+}
+
+a#login-google-button {
+  background: white;
+  border: 2px solid #eee;
+  border-radius: 50px;
+  width: 75vw;
 }
 
 .carousel-item {
