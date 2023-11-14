@@ -12,11 +12,13 @@ Projeto criado em Python com Flask para consumir uma API do tempo (WeatherAPI) e
 
 - [@delpassorodrigo](https://www.github.com/delpassorodrigo)
 - [@flcordis](https://www.github.com/flcordis)
+- Leonardo Marcondes
+- Igor M.
 
 
 ## Deploy
 
-Para fazer o deploy desse projeto Python, usamos o Docker para não precisar instalar as coisas em nossa máquina.
+O Deploy do projeto foi feito em Docker, para que não exista necessidade de instalar as dependências do projeto e receber algum erro por causa de versão. Então assim, deve instalar apenas o Docker Desktop: 
 https://docs.docker.com/desktop/install/windows-install/
 
 Clonando o repositório:
